@@ -32,6 +32,309 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <style>
+        /* ── TEAM SECTION ──────────────────────────────────────────── */
+        .team-section {
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #000, #080f1e);
+        }
+
+        .team-section .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* FOUNDER CARD */
+        .founder-card {
+            position: relative;
+            background: #0b1629;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0ea5e9, #38bdf8, #0ea5e9);
+        }
+
+        .founder-layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+        }
+
+        /* Photo column */
+        .founder-photo-col {
+            position: relative;
+            background: #060e1c;
+            border-right: 1px solid rgba(255,255,255,0.06);
+            min-height: 300px;
+        }
+
+        .founder-photo-col img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .founder-tag {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(14,165,233,0.12);
+            border: 1px solid rgba(14,165,233,0.3);
+            color: #38bdf8;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 5px 16px;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
+
+        /* Content column */
+        .founder-content {
+            padding: 36px 40px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .founder-name {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.3px;
+            margin-bottom: 4px;
+            line-height: 1.15;
+        }
+
+        .founder-role-line {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0ea5e9;
+            margin-bottom: 22px;
+        }
+
+        .founder-bio {
+            font-size: 1rem;
+            color: #94a3b8;
+            line-height: 1.85;
+            margin-bottom: 28px;
+        }
+
+        .founder-stats {
+            display: flex;
+            gap: 24px;
+        }
+
+        .f-stat {
+            border-left: 2px solid rgba(14,165,233,0.3);
+            padding-left: 14px;
+        }
+
+        .f-stat-num {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .f-stat-lbl {
+            font-size: 0.7rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 3px;
+        }
+
+        /* TEAM DIVIDER */
+        .team-divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 40px 0 32px;
+        }
+
+        .team-divider-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.07);
+        }
+
+        .team-divider-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #334155;
+            white-space: nowrap;
+        }
+
+        /* CHANDAN CARD */
+        .chandan-card {
+            background: #0b1629;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 160px 1fr;
+        }
+
+        .chandan-photo-col {
+            background: #060e1c;
+            border-right: 1px solid rgba(255,255,255,0.06);
+            min-height: 240px;
+            position: relative;
+        }
+
+        .chandan-photo-col img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .chandan-content {
+            padding: 28px 32px;
+        }
+
+        .chandan-name {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        /* RRP role pill */
+        .role-pill-rrp {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #0ea5e9;
+            background: rgba(14,165,233,0.08);
+            border: 1px solid rgba(14,165,233,0.2);
+            padding: 4px 12px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+
+        .chandan-bio {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Vista Mind Tech block */
+        .vista-block {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
+
+        .vista-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .vista-logo {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .vista-name {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #cbd5e1;
+            letter-spacing: 0.5px;
+        }
+
+        .vista-unit-tag {
+            margin-left: auto;
+            font-size: 0.62rem;
+            font-weight: 600;
+            color: #475569;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .vista-role-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .vista-services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .vista-tag {
+            font-size: 0.7rem;
+            color: #64748b;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 680px) {
+            .founder-layout {
+                grid-template-columns: 1fr;
+            }
+            .founder-photo-col {
+                min-height: 260px;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+            .founder-tag {
+                bottom: 12px;
+            }
+            .founder-content {
+                padding: 24px 20px 28px;
+            }
+            .founder-stats {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            .chandan-card {
+                grid-template-columns: 1fr;
+            }
+            .chandan-photo-col {
+                min-height: 200px;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+            .chandan-content {
+                padding: 20px 18px;
+            }
+        }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -216,6 +519,103 @@
                 </ul>
             </div>
         </section>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             TEAM SECTION — Founder + Leadership
+             ═══════════════════════════════════════════════════════ -->
+        <section class="team-section" aria-labelledby="team-heading">
+            <div class="container">
+
+                <div class="badge-center" style="margin-bottom: 10px;">
+                    <span class="badge">The People Behind RRP</span>
+                </div>
+                <h2 id="team-heading" style="font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; color: #fff; text-align: center; margin-bottom: 48px;">
+                    Leadership &amp; <span class="gradient-text">Vision</span>
+                </h2>
+
+                <!-- FOUNDER — Ramesh Babu Anke -->
+                <div class="founder-card" aria-label="Founder profile">
+                    <div class="founder-layout">
+
+                        <div class="founder-photo-col">
+                            <img src="/assets/rameshbabu.png" alt="Ramesh Babu Anke — Founder, RRP Enterprises" loading="lazy">
+                            <div class="founder-tag">Founder</div>
+                        </div>
+
+                        <div class="founder-content">
+                            <h3 class="founder-name">Ramesh Babu Anke</h3>
+                            <div class="founder-role-line">Founder · RRP Enterprises</div>
+
+                            <p class="founder-bio">
+                                Ramesh Babu Anke built RRP Enterprises on a simple but unshakeable belief — that Indian logistics deserves a partner who treats every load as a commitment, not a transaction. Under his leadership, what began as a lean regional operation has grown into a pan-India supply chain force with 500+ verified vehicles, strategic hubs in Anantapur and Tadipatri, and proprietary technology driving every move. His focus on fleet discipline, driver safety, and client accountability has earned trust from industry names like DHL Supply Chain, Delhivery, and CJ Darcl — and continues to power the supply chains that move the nation.
+                            </p>
+
+                            <div class="founder-stats">
+                                <div class="f-stat">
+                                    <div class="f-stat-num">500+</div>
+                                    <div class="f-stat-lbl">Verified Vehicles</div>
+                                </div>
+                                <div class="f-stat">
+                                    <div class="f-stat-num">99.9%</div>
+                                    <div class="f-stat-lbl">On-Time Delivery</div>
+                                </div>
+                                <div class="f-stat">
+                                    <div class="f-stat-num">Pan-India</div>
+                                    <div class="f-stat-lbl">Network</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /FOUNDER -->
+
+                <!-- DIVIDER -->
+                <div class="team-divider" role="separator">
+                    <div class="team-divider-line"></div>
+                    <div class="team-divider-label">Leadership Team</div>
+                    <div class="team-divider-line"></div>
+                </div>
+
+                <!-- CHANDAN R -->
+                <div class="chandan-card" aria-label="Leadership profile — Chandan R">
+
+                    <div class="chandan-photo-col">
+                        <img src="/assets/chandan.png" alt="Chandan R — Business Head, RRP Enterprises" loading="lazy">
+                    </div>
+
+                    <div class="chandan-content">
+                        <h3 class="chandan-name">Chandan R</h3>
+                        <div class="role-pill-rrp">Business Head · RRP Enterprises</div>
+
+                        <p class="chandan-bio">
+                            With a decade of front-line experience across Honda Cars, Tata Motors EV, and TVS Motor Company — including a Territory Manager role at TVS — Chandan brings sharp business instincts and deep market understanding to RRP's growth operations. He leads business strategy, client relationships, and expansion at RRP Enterprises, while channelling his passion for digital transformation into building Vista Mind Tech.
+                        </p>
+
+                        <!-- Vista Mind Tech block -->
+                        <div class="vista-block">
+                            <div class="vista-header">
+                                <img src="/assets/vista.png" alt="Vista Mind Tech logo" class="vista-logo">
+                                <span class="vista-name">Vista Mind Tech</span>
+                                <span class="vista-unit-tag">A unit of RRP</span>
+                            </div>
+                            <div class="vista-role-title">Principal Architect</div>
+                            <div class="vista-services">
+                                <span class="vista-tag">Websites</span>
+                                <span class="vista-tag">Mobile Apps</span>
+                                <span class="vista-tag">CRM Systems</span>
+                                <span class="vista-tag">Booking Platforms</span>
+                                <span class="vista-tag">Business Dashboards</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /CHANDAN -->
+
+            </div>
+        </section>
+        <!-- /TEAM SECTION -->
 
         <section style="padding: 100px 20px; text-align: center; background: linear-gradient(to bottom, #000, #0b1121);" aria-labelledby="cta-heading">
             <div class="container">
